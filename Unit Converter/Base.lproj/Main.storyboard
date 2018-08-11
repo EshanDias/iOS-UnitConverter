@@ -79,6 +79,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="onGramValueChange:" destination="9pv-A4-QxB" eventType="valueChanged" id="GLB-hJ-hMb"/>
+                                    <action selector="onGramValueChange:" destination="9pv-A4-QxB" eventType="editingChanged" id="hc1-SU-Y49"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kg" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dis-qf-x5D">
                                 <rect key="frame" x="215" y="172" width="145" height="30"/>
@@ -136,6 +140,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Weight" image="weight_tabMenu" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="gramTextField" destination="zPB-rb-ADC" id="lhM-zc-KtJ"/>
+                        <outlet property="kilogramTextField" destination="dis-qf-x5D" id="sYX-N6-i4E"/>
+                        <outlet property="ounceTextField" destination="uan-Mu-GtI" id="qoi-mG-eb1"/>
+                        <outlet property="poundTextField" destination="cPp-3Q-LFn" id="XAH-uC-ofZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

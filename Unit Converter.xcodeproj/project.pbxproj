@@ -15,6 +15,9 @@
 		9C0DEC08211ED38100AF2603 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0DEC06211ED38100AF2603 /* LaunchScreen.storyboard */; };
 		9C3ADDA8211EEBFA00B9EB59 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3ADDA7211EEBFA00B9EB59 /* SpeedViewController.swift */; };
 		9C3ADDAA211EEC0B00B9EB59 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3ADDA9211EEC0B00B9EB59 /* TemperatureViewController.swift */; };
+		9CED3229211F17AA0032E367 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED3228211F17AA0032E367 /* Weight.swift */; };
+		9CED322C211F195A0032E367 /* WellknownWeightType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED322B211F19590032E367 /* WellknownWeightType.swift */; };
+		9CED322E211F1BAE0032E367 /* WeightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED322D211F1BAE0032E367 /* WeightController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		9C0DEC09211ED38100AF2603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C3ADDA7211EEBFA00B9EB59 /* SpeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		9C3ADDA9211EEC0B00B9EB59 /* TemperatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
+		9CED3228211F17AA0032E367 /* Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
+		9CED322B211F19590032E367 /* WellknownWeightType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellknownWeightType.swift; sourceTree = "<group>"; };
+		9CED322D211F1BAE0032E367 /* WeightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 		9C0DEBFA211ED38100AF2603 /* Unit Converter */ = {
 			isa = PBXGroup;
 			children = (
+				9CED322A211F192B0032E367 /* common */,
+				9CED3227211F17720032E367 /* controller */,
+				9CED3226211F17670032E367 /* model */,
 				9C0DEBFB211ED38100AF2603 /* AppDelegate.swift */,
 				9C0DEBFD211ED38100AF2603 /* WeightViewController.swift */,
 				9C0DEBFF211ED38100AF2603 /* DistanceViewController.swift */,
@@ -71,6 +80,30 @@
 				9C3ADDA9211EEC0B00B9EB59 /* TemperatureViewController.swift */,
 			);
 			path = "Unit Converter";
+			sourceTree = "<group>";
+		};
+		9CED3226211F17670032E367 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				9CED3228211F17AA0032E367 /* Weight.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		9CED3227211F17720032E367 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				9CED322D211F1BAE0032E367 /* WeightController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		9CED322A211F192B0032E367 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				9CED322B211F19590032E367 /* WellknownWeightType.swift */,
+			);
+			name = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +181,11 @@
 				9C3ADDA8211EEBFA00B9EB59 /* SpeedViewController.swift in Sources */,
 				9C0DEC00211ED38100AF2603 /* DistanceViewController.swift in Sources */,
 				9C0DEBFC211ED38100AF2603 /* AppDelegate.swift in Sources */,
+				9CED322C211F195A0032E367 /* WellknownWeightType.swift in Sources */,
 				9C0DEBFE211ED38100AF2603 /* WeightViewController.swift in Sources */,
+				9CED322E211F1BAE0032E367 /* WeightController.swift in Sources */,
 				9C3ADDAA211EEC0B00B9EB59 /* TemperatureViewController.swift in Sources */,
+				9CED3229211F17AA0032E367 /* Weight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
