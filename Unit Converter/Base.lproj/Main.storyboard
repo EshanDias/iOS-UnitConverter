@@ -92,6 +92,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="onKilogramValueChange:" destination="9pv-A4-QxB" eventType="editingChanged" id="qMT-D1-8zi"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lb" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cPp-3Q-LFn">
                                 <rect key="frame" x="215" y="222" width="145" height="30"/>
@@ -101,6 +104,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="onPoundValueChange:" destination="9pv-A4-QxB" eventType="editingChanged" id="zCm-Nt-k3m"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="oz" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uan-Mu-GtI">
                                 <rect key="frame" x="215" y="272" width="145" height="30"/>
@@ -110,9 +116,28 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="onOunceValueChange:" destination="9pv-A4-QxB" eventType="editingChanged" id="hfW-vS-RRh"/>
+                                </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aql-ER-j6q">
+                                <rect key="frame" x="280" y="322" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Pld-HV-MYk"/>
+                                    <constraint firstAttribute="width" constant="80" id="Qg1-oQ-CSa"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClearOnClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="poW-KJ-PPS"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cPp-3Q-LFn" firstAttribute="top" secondItem="dis-qf-x5D" secondAttribute="bottom" constant="20" id="2Ty-Mq-f6B"/>
                             <constraint firstItem="HuB-FE-RnA" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="15" id="2Yo-EE-Ica"/>
@@ -127,7 +152,9 @@
                             <constraint firstItem="uan-Mu-GtI" firstAttribute="top" secondItem="cPp-3Q-LFn" secondAttribute="bottom" constant="20" id="WS5-zP-F2T"/>
                             <constraint firstAttribute="trailing" secondItem="cPp-3Q-LFn" secondAttribute="trailing" constant="15" id="bgf-zP-cJN"/>
                             <constraint firstItem="cPp-3Q-LFn" firstAttribute="leading" secondItem="HuB-FE-RnA" secondAttribute="trailing" constant="50" id="eFW-QM-DQd"/>
+                            <constraint firstItem="Aql-ER-j6q" firstAttribute="top" secondItem="uan-Mu-GtI" secondAttribute="bottom" constant="20" id="eNT-ZH-hO0"/>
                             <constraint firstItem="0c5-wh-o5z" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="fVw-ns-9hZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Aql-ER-j6q" secondAttribute="trailing" constant="15" id="jnw-wh-X57"/>
                             <constraint firstAttribute="trailing" secondItem="uan-Mu-GtI" secondAttribute="trailing" constant="15" id="lYN-8x-eZZ"/>
                             <constraint firstAttribute="trailing" secondItem="0c5-wh-o5z" secondAttribute="trailing" id="q6s-lE-YFt"/>
                             <constraint firstItem="kTw-UQ-bUA" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="15" id="tee-gm-c0W"/>
