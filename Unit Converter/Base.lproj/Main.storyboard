@@ -247,6 +247,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="metreValueOnChange:" destination="8rJ-Kc-sve" eventType="editingChanged" id="BTE-xR-Ynb"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ft" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bt6-pU-gfz">
                                 <rect key="frame" x="215" y="172" width="145" height="30"/>
@@ -256,6 +259,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="footValueOnChange:" destination="8rJ-Kc-sve" eventType="editingChanged" id="8ZD-eM-omx"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="yd" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GNK-nb-qV3">
                                 <rect key="frame" x="215" y="222" width="145" height="30"/>
@@ -265,6 +271,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="yardValueOnChange:" destination="8rJ-Kc-sve" eventType="editingChanged" id="sdK-Dr-cni"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="km" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jwj-BF-mac">
                                 <rect key="frame" x="215" y="272" width="145" height="30"/>
@@ -274,6 +283,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="kilometreValueOnChange:" destination="8rJ-Kc-sve" eventType="editingChanged" id="k4L-1v-27d"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrK-yg-uKS">
                                 <rect key="frame" x="15" y="322" width="150" height="30"/>
@@ -293,11 +305,31 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="mileValueOnChange:" destination="8rJ-Kc-sve" eventType="editingChanged" id="Las-l1-qe7"/>
+                                </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnM-kt-MEd">
+                                <rect key="frame" x="280" y="372" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="6UF-za-Cgu"/>
+                                    <constraint firstAttribute="height" constant="30" id="jn8-fK-HBW"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClearOnClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="SJA-wa-Hv8"/>
+                                    <action selector="clearButtonOnClick:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="dZT-oM-41T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bt6-pU-gfz" firstAttribute="leading" secondItem="GcH-E5-zhy" secondAttribute="trailing" constant="50" id="2yS-G8-f1p"/>
+                            <constraint firstAttribute="trailing" secondItem="fnM-kt-MEd" secondAttribute="trailing" constant="15" id="8aC-n2-3xt"/>
                             <constraint firstItem="Bhv-70-6lK" firstAttribute="top" secondItem="Jwj-BF-mac" secondAttribute="bottom" constant="20" id="9gp-oc-yZG"/>
                             <constraint firstAttribute="trailing" secondItem="9r2-TJ-PzA" secondAttribute="trailing" id="Aza-33-wVU"/>
                             <constraint firstItem="9r2-TJ-PzA" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="B9g-tf-Jcf"/>
@@ -327,6 +359,7 @@
                             <constraint firstItem="GcH-E5-zhy" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="15" id="tKp-VR-WaN"/>
                             <constraint firstItem="sqK-HL-v5C" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="15" id="vXI-jP-qYc"/>
                             <constraint firstItem="Jwj-BF-mac" firstAttribute="leading" secondItem="sqK-HL-v5C" secondAttribute="trailing" constant="50" id="w7g-PN-EfF"/>
+                            <constraint firstItem="fnM-kt-MEd" firstAttribute="top" secondItem="Bhv-70-6lK" secondAttribute="bottom" constant="20" id="xia-st-Fdt"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -336,6 +369,13 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Distance" image="distance_tabMenu" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="footTextField" destination="Bt6-pU-gfz" id="kW9-uB-lmj"/>
+                        <outlet property="kilometreTextField" destination="Jwj-BF-mac" id="xeK-oq-CaA"/>
+                        <outlet property="metreTextField" destination="aH5-XD-3Np" id="9Jb-BL-2tl"/>
+                        <outlet property="mileTextField" destination="Bhv-70-6lK" id="oTW-hY-9DE"/>
+                        <outlet property="yardTextField" destination="GNK-nb-qV3" id="v2e-II-1XO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -459,6 +499,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUi-ad-2t4">
+                                <rect key="frame" x="280" y="322" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="1Ng-LN-4dP"/>
+                                    <constraint firstAttribute="height" constant="30" id="wEk-rO-rw4"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClearOnClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="5Hm-kY-V5h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -473,12 +528,14 @@
                             <constraint firstItem="dNc-5d-aPb" firstAttribute="leading" secondItem="dcx-gr-QWS" secondAttribute="leading" constant="15" id="MVh-QY-Oyj"/>
                             <constraint firstItem="LGb-QM-c3W" firstAttribute="leading" secondItem="ewq-T7-2Vq" secondAttribute="trailing" constant="50" id="O4U-4f-eop"/>
                             <constraint firstItem="dNc-5d-aPb" firstAttribute="top" secondItem="Dzb-zy-XBT" secondAttribute="bottom" constant="20" id="ORV-xT-DKV"/>
+                            <constraint firstItem="nUi-ad-2t4" firstAttribute="top" secondItem="4h1-lG-JA1" secondAttribute="bottom" constant="20" id="Oez-tq-Ps3"/>
                             <constraint firstItem="AgI-EU-MDT" firstAttribute="leading" secondItem="dcx-gr-QWS" secondAttribute="leading" constant="15" id="PC6-ih-p7m"/>
                             <constraint firstItem="AgI-EU-MDT" firstAttribute="top" secondItem="ewq-T7-2Vq" secondAttribute="bottom" constant="20" id="PlM-1b-zz7"/>
                             <constraint firstAttribute="trailing" secondItem="phh-6r-EoR" secondAttribute="trailing" constant="15" id="QAc-Ur-gK0"/>
                             <constraint firstItem="LGb-QM-c3W" firstAttribute="top" secondItem="phh-6r-EoR" secondAttribute="bottom" constant="20" id="Qw4-zT-pDA"/>
                             <constraint firstItem="yOl-tb-0Jj" firstAttribute="top" secondItem="Gyy-xM-cff" secondAttribute="bottom" constant="50" id="aea-W2-tsB"/>
                             <constraint firstItem="phh-6r-EoR" firstAttribute="top" secondItem="yOl-tb-0Jj" secondAttribute="bottom" constant="20" id="afG-Pb-Tdx"/>
+                            <constraint firstAttribute="trailing" secondItem="nUi-ad-2t4" secondAttribute="trailing" constant="15" id="ePJ-s4-X6F"/>
                             <constraint firstAttribute="trailing" secondItem="4h1-lG-JA1" secondAttribute="trailing" constant="15" id="fDc-Xb-ktd"/>
                             <constraint firstItem="Gyy-xM-cff" firstAttribute="leading" secondItem="dcx-gr-QWS" secondAttribute="leading" id="hsf-B7-puz"/>
                             <constraint firstAttribute="trailing" secondItem="LGb-QM-c3W" secondAttribute="trailing" constant="15" id="il9-Tg-MmQ"/>
@@ -579,6 +636,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="han-Kf-8hJ">
+                                <rect key="frame" x="280" y="272" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="GzM-ZX-yrB"/>
+                                    <constraint firstAttribute="height" constant="30" id="eLf-S4-Afr"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClearOnClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="d82-EQ-Yy6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -591,6 +663,7 @@
                             <constraint firstAttribute="trailing" secondItem="f2u-rf-hic" secondAttribute="trailing" id="IS1-4I-oOb"/>
                             <constraint firstItem="f2u-rf-hic" firstAttribute="top" secondItem="Hvp-Ru-Nbh" secondAttribute="bottom" constant="8" id="KHF-Ka-E3g"/>
                             <constraint firstItem="AAH-9P-RMJ" firstAttribute="top" secondItem="f2u-rf-hic" secondAttribute="bottom" constant="50" id="KT6-Ev-NJA"/>
+                            <constraint firstAttribute="trailing" secondItem="han-Kf-8hJ" secondAttribute="trailing" constant="15" id="NXE-u2-Xkq"/>
                             <constraint firstItem="cwx-0L-NRq" firstAttribute="top" secondItem="AAH-9P-RMJ" secondAttribute="bottom" constant="15" id="NhR-mh-cbB"/>
                             <constraint firstItem="Rcv-sp-PC6" firstAttribute="top" secondItem="cwx-0L-NRq" secondAttribute="bottom" constant="20" id="OKO-NL-GOR"/>
                             <constraint firstItem="cwx-0L-NRq" firstAttribute="leading" secondItem="zjF-z8-Fs7" secondAttribute="trailing" constant="50" id="PBX-fx-LW9"/>
@@ -599,6 +672,7 @@
                             <constraint firstItem="f2u-rf-hic" firstAttribute="leading" secondItem="pBU-Ik-nyL" secondAttribute="leading" id="bzg-hm-nsv"/>
                             <constraint firstItem="zlL-h6-8Tq" firstAttribute="top" secondItem="zjF-z8-Fs7" secondAttribute="bottom" constant="20" id="cZ8-LL-Ma7"/>
                             <constraint firstItem="zjF-z8-Fs7" firstAttribute="leading" secondItem="pBU-Ik-nyL" secondAttribute="leading" constant="15" id="dcC-HA-kPr"/>
+                            <constraint firstItem="han-Kf-8hJ" firstAttribute="top" secondItem="Rcv-sp-PC6" secondAttribute="bottom" constant="20" id="fmV-ol-YDy"/>
                             <constraint firstItem="cwx-0L-NRq" firstAttribute="top" secondItem="AAH-9P-RMJ" secondAttribute="bottom" constant="20" id="fux-hY-0Dl"/>
                             <constraint firstItem="G9l-Yn-EW1" firstAttribute="top" secondItem="f2u-rf-hic" secondAttribute="bottom" constant="50" id="qrM-g8-sA2"/>
                             <constraint firstItem="G9l-Yn-EW1" firstAttribute="leading" secondItem="pBU-Ik-nyL" secondAttribute="leading" constant="15" id="tol-AP-eSJ"/>

@@ -8,22 +8,12 @@
 
 import UIKit
 
-class WeightViewController: UIViewController {
+class WeightViewController: BaseViewController {
 
     @IBOutlet weak var gramTextField: UITextField!
     @IBOutlet weak var kilogramTextField: UITextField!
     @IBOutlet weak var poundTextField: UITextField!
     @IBOutlet weak var ounceTextField: UITextField!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func onGramValueChange(_ sender: Any) {
         if (self.gramTextField.text != "") {
@@ -79,11 +69,6 @@ class WeightViewController: UIViewController {
         else {
             buttonClearOnClicked(sender)
         }
-    }
-    
-    // Hiding the KeyBoad when touches outside
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
     }
     
     @IBAction func buttonClearOnClicked(_ sender: Any) {
