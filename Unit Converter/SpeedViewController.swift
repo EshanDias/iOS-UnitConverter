@@ -8,28 +8,73 @@
 
 import UIKit
 
-class SpeedViewController: UIViewController {
+class SpeedViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var mpsTextField: UITextField!
+    @IBOutlet weak var ftpsTextField: UITextField!
+    @IBOutlet weak var kmphTextField: UITextField!
+    @IBOutlet weak var mphTextField: UITextField!
+    
+    @IBAction func mpsOnValueChange(_ sender: Any) {
+        if (self.mpsTextField.text != "") {
+            let speedController = SpeedController(valueToConvert: self.mpsTextField.text!, typeOfValue: WellknownSpeedType.METERS_PER_SECOND)
+            let speeds:Speed = speedController.convertValues()
+            
+            self.kmphTextField.text = String(speeds.getSpeedInKMPH())
+            self.ftpsTextField.text = String(speeds.getSpeedInFTPM())
+            self.mphTextField.text = String(speeds.getSpeedInMPH())
+        }
+        else {
+            clearButtonOnClick(sender)
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func ftpsOnValueChange(_ sender: Any) {
+        if (self.ftpsTextField.text != "") {
+            let speedController = SpeedController(valueToConvert: self.ftpsTextField.text!, typeOfValue: WellknownSpeedType.FEET_PER_HOUR)
+            let speeds:Speed = speedController.convertValues()
+            
+            self.kmphTextField.text = String(speeds.getSpeedInKMPH())
+            self.mpsTextField.text = String(speeds.getSpeedInMPS())
+            self.mphTextField.text = String(speeds.getSpeedInMPH())
+        }
+        else {
+            clearButtonOnClick(sender)
+        }
     }
-    */
-
+    
+    @IBAction func kmphOnValueChange(_ sender: Any) {
+        if (self.kmphTextField.text != "") {
+            let speedController = SpeedController(valueToConvert: self.kmphTextField.text!, typeOfValue: WellknownSpeedType.KILOMETERS_PER_HOUR)
+            let speeds:Speed = speedController.convertValues()
+            
+            self.mpsTextField.text = String(speeds.getSpeedInMPS())
+            self.ftpsTextField.text = String(speeds.getSpeedInFTPM())
+            self.mphTextField.text = String(speeds.getSpeedInMPH())
+        }
+        else {
+            clearButtonOnClick(sender)
+        }
+    }
+    
+    @IBAction func mphOnValueChange(_ sender: Any) {
+        if (self.mphTextField.text != "") {
+            let speedController = SpeedController(valueToConvert: self.mphTextField.text!, typeOfValue: WellknownSpeedType.MILES_PER_HOUR)
+            let speeds:Speed = speedController.convertValues()
+            
+            self.kmphTextField.text = String(speeds.getSpeedInKMPH())
+            self.ftpsTextField.text = String(speeds.getSpeedInFTPM())
+            self.mpsTextField.text = String(speeds.getSpeedInMPS())
+        }
+        else {
+            clearButtonOnClick(sender)
+        }
+    }
+    
+    @IBAction func clearButtonOnClick(_ sender: Any) {
+        self.kmphTextField.text = ""
+        self.ftpsTextField.text = ""
+        self.mpsTextField.text = ""
+        self.mphTextField.text = ""
+    }
 }

@@ -19,6 +19,9 @@
 		9C180EDD211F860600F580D3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C180EDC211F860600F580D3 /* BaseViewController.swift */; };
 		9C3ADDA8211EEBFA00B9EB59 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3ADDA7211EEBFA00B9EB59 /* SpeedViewController.swift */; };
 		9C3ADDAA211EEC0B00B9EB59 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3ADDA9211EEC0B00B9EB59 /* TemperatureViewController.swift */; };
+		9CC34A41211F97CF00E8497D /* WellknownSpeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC34A40211F97CF00E8497D /* WellknownSpeedType.swift */; };
+		9CC34A43211F996F00E8497D /* Speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC34A42211F996F00E8497D /* Speed.swift */; };
+		9CC34A45211F99B300E8497D /* SpeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC34A44211F99B300E8497D /* SpeedController.swift */; };
 		9CED3229211F17AA0032E367 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED3228211F17AA0032E367 /* Weight.swift */; };
 		9CED322C211F195A0032E367 /* WellknownWeightType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED322B211F19590032E367 /* WellknownWeightType.swift */; };
 		9CED322E211F1BAE0032E367 /* WeightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED322D211F1BAE0032E367 /* WeightController.swift */; };
@@ -39,6 +42,9 @@
 		9C180EDC211F860600F580D3 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9C3ADDA7211EEBFA00B9EB59 /* SpeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		9C3ADDA9211EEC0B00B9EB59 /* TemperatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
+		9CC34A40211F97CF00E8497D /* WellknownSpeedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellknownSpeedType.swift; sourceTree = "<group>"; };
+		9CC34A42211F996F00E8497D /* Speed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speed.swift; sourceTree = "<group>"; };
+		9CC34A44211F99B300E8497D /* SpeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedController.swift; sourceTree = "<group>"; };
 		9CED3228211F17AA0032E367 /* Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		9CED322B211F19590032E367 /* WellknownWeightType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellknownWeightType.swift; sourceTree = "<group>"; };
 		9CED322D211F1BAE0032E367 /* WeightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightController.swift; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 			children = (
 				9CED3228211F17AA0032E367 /* Weight.swift */,
 				9C180ED6211F85A400F580D3 /* Distance.swift */,
+				9CC34A42211F996F00E8497D /* Speed.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -105,6 +112,7 @@
 			children = (
 				9CED322D211F1BAE0032E367 /* WeightController.swift */,
 				9C180ED8211F85BD00F580D3 /* DistanceController.swift */,
+				9CC34A44211F99B300E8497D /* SpeedController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 			children = (
 				9CED322B211F19590032E367 /* WellknownWeightType.swift */,
 				9C180EDA211F85D700F580D3 /* WellknownDistanceType.swift */,
+				9CC34A40211F97CF00E8497D /* WellknownSpeedType.swift */,
 			);
 			name = common;
 			sourceTree = "<group>";
@@ -192,6 +201,7 @@
 			files = (
 				9C180EDB211F85D700F580D3 /* WellknownDistanceType.swift in Sources */,
 				9C180ED7211F85A400F580D3 /* Distance.swift in Sources */,
+				9CC34A45211F99B300E8497D /* SpeedController.swift in Sources */,
 				9C3ADDA8211EEBFA00B9EB59 /* SpeedViewController.swift in Sources */,
 				9C0DEC00211ED38100AF2603 /* DistanceViewController.swift in Sources */,
 				9C0DEBFC211ED38100AF2603 /* AppDelegate.swift in Sources */,
@@ -201,7 +211,9 @@
 				9C180ED9211F85BD00F580D3 /* DistanceController.swift in Sources */,
 				9CED322E211F1BAE0032E367 /* WeightController.swift in Sources */,
 				9C3ADDAA211EEC0B00B9EB59 /* TemperatureViewController.swift in Sources */,
+				9CC34A43211F996F00E8497D /* Speed.swift in Sources */,
 				9CED3229211F17AA0032E367 /* Weight.swift in Sources */,
+				9CC34A41211F97CF00E8497D /* WellknownSpeedType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
