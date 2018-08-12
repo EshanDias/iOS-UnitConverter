@@ -25,4 +25,17 @@ class BaseViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    func isMatched(regexPattern pattern: String, stringToCompare value: String) -> Bool{
+        var status = false
+        
+        let regex = try! NSRegularExpression(pattern: pattern, options: [])
+        let matches = regex.matches(in: value, options: [], range: NSRange(location: 0, length: value.characters.count))
+        
+        if matches.count > 0 {
+            status = true
+        }
+        
+        return status
+    }
 }
