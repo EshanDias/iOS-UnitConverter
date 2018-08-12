@@ -22,6 +22,9 @@
 		9CC34A41211F97CF00E8497D /* WellknownSpeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC34A40211F97CF00E8497D /* WellknownSpeedType.swift */; };
 		9CC34A43211F996F00E8497D /* Speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC34A42211F996F00E8497D /* Speed.swift */; };
 		9CC34A45211F99B300E8497D /* SpeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC34A44211F99B300E8497D /* SpeedController.swift */; };
+		9CC34A472120B82200E8497D /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC34A462120B82200E8497D /* Temperature.swift */; };
+		9CC34A4B2120B85D00E8497D /* WellknownTemperatureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC34A4A2120B85D00E8497D /* WellknownTemperatureType.swift */; };
+		9CC34A4D2120B8AF00E8497D /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC34A4C2120B8AF00E8497D /* TemperatureController.swift */; };
 		9CED3229211F17AA0032E367 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED3228211F17AA0032E367 /* Weight.swift */; };
 		9CED322C211F195A0032E367 /* WellknownWeightType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED322B211F19590032E367 /* WellknownWeightType.swift */; };
 		9CED322E211F1BAE0032E367 /* WeightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED322D211F1BAE0032E367 /* WeightController.swift */; };
@@ -45,6 +48,9 @@
 		9CC34A40211F97CF00E8497D /* WellknownSpeedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellknownSpeedType.swift; sourceTree = "<group>"; };
 		9CC34A42211F996F00E8497D /* Speed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speed.swift; sourceTree = "<group>"; };
 		9CC34A44211F99B300E8497D /* SpeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedController.swift; sourceTree = "<group>"; };
+		9CC34A462120B82200E8497D /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		9CC34A4A2120B85D00E8497D /* WellknownTemperatureType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellknownTemperatureType.swift; sourceTree = "<group>"; };
+		9CC34A4C2120B8AF00E8497D /* TemperatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureController.swift; sourceTree = "<group>"; };
 		9CED3228211F17AA0032E367 /* Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		9CED322B211F19590032E367 /* WellknownWeightType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellknownWeightType.swift; sourceTree = "<group>"; };
 		9CED322D211F1BAE0032E367 /* WeightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,7 @@
 				9CED3228211F17AA0032E367 /* Weight.swift */,
 				9C180ED6211F85A400F580D3 /* Distance.swift */,
 				9CC34A42211F996F00E8497D /* Speed.swift */,
+				9CC34A462120B82200E8497D /* Temperature.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 				9CED322D211F1BAE0032E367 /* WeightController.swift */,
 				9C180ED8211F85BD00F580D3 /* DistanceController.swift */,
 				9CC34A44211F99B300E8497D /* SpeedController.swift */,
+				9CC34A4C2120B8AF00E8497D /* TemperatureController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 				9CED322B211F19590032E367 /* WellknownWeightType.swift */,
 				9C180EDA211F85D700F580D3 /* WellknownDistanceType.swift */,
 				9CC34A40211F97CF00E8497D /* WellknownSpeedType.swift */,
+				9CC34A4A2120B85D00E8497D /* WellknownTemperatureType.swift */,
 			);
 			name = common;
 			sourceTree = "<group>";
@@ -206,13 +215,16 @@
 				9C0DEC00211ED38100AF2603 /* DistanceViewController.swift in Sources */,
 				9C0DEBFC211ED38100AF2603 /* AppDelegate.swift in Sources */,
 				9C180EDD211F860600F580D3 /* BaseViewController.swift in Sources */,
+				9CC34A4D2120B8AF00E8497D /* TemperatureController.swift in Sources */,
 				9CED322C211F195A0032E367 /* WellknownWeightType.swift in Sources */,
 				9C0DEBFE211ED38100AF2603 /* WeightViewController.swift in Sources */,
 				9C180ED9211F85BD00F580D3 /* DistanceController.swift in Sources */,
+				9CC34A472120B82200E8497D /* Temperature.swift in Sources */,
 				9CED322E211F1BAE0032E367 /* WeightController.swift in Sources */,
 				9C3ADDAA211EEC0B00B9EB59 /* TemperatureViewController.swift in Sources */,
 				9CC34A43211F996F00E8497D /* Speed.swift in Sources */,
 				9CED3229211F17AA0032E367 /* Weight.swift in Sources */,
+				9CC34A4B2120B85D00E8497D /* WellknownTemperatureType.swift in Sources */,
 				9CC34A41211F97CF00E8497D /* WellknownSpeedType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
