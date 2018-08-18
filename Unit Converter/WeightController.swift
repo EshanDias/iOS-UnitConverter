@@ -9,14 +9,17 @@
 import Foundation
 
 class WeightController {
+    // Private attribute of the class which holds the value to convert and the weight type.
     private var valueToConvert:Double
     private var weightType: WellknownWeightType
     
+    // Constructor which defines the type of conversion and the and value to convert.
     init(valueToConvert value: String, typeOfValue weightType: WellknownWeightType) {
         self.valueToConvert = Double(value)!
         self.weightType = weightType
     }
     
+    // Covert the weight in grams to other weight types.
     private func convertValuesFromGram() -> Weight {
         let weights = Weight()
         let kg = (valueToConvert / 1000).roundToDecimal(10)
@@ -31,22 +34,29 @@ class WeightController {
         return weights
     }
     
+    // Executes when user types on the Kilogram field
+    // Covert the Kilogram value to Gram and call the convertValuesFromGram to convert to other weight types.
     private func convertValuesFromKilogram() -> Weight {
         self.valueToConvert = self.valueToConvert / 1000
         return convertValuesFromGram()
     }
     
+    // Executes when user types on the ounce field
+    // Covert the Ounce value to Gram and call the convertValuesFromGram to convert to other weight types.
     private func convertFromOunce() -> Weight {
         self.valueToConvert = self.valueToConvert / 0.03527396195
         return convertValuesFromGram()
     }
     
+    // Executes when user types on the Pounds field
+    // Covert the Pound value to Gram and call the convertValuesFromGram to convert to other weight types.
     private func convertValuesFromPounds() -> Weight {
         self.valueToConvert = self.valueToConvert * 453.59237
         return convertValuesFromGram()
 
     }
     
+    // This determines which method to call first to convert by checking the weight type entered.
     func convertValues() -> Weight {
         let weight: Weight
         switch weightType {
@@ -63,6 +73,7 @@ class WeightController {
     }
 }
 
+// Extending the Double type to make it able to round to a defined number of decimal places.
 extension Double {
     func roundToDecimal(_ fractionDigits: Int) -> Double {
         let multiplier = pow(10, Double(fractionDigits))

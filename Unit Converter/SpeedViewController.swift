@@ -10,11 +10,13 @@ import UIKit
 
 class SpeedViewController: BaseViewController {
     
+    // Assigning the textfields on the current UI
     @IBOutlet weak var mpsTextField: UITextField!
-    @IBOutlet weak var ftpsTextField: UITextField!
+    @IBOutlet weak var ftpmTextField: UITextField!
     @IBOutlet weak var kmphTextField: UITextField!
     @IBOutlet weak var mphTextField: UITextField!
     
+    // Executes when meters per second text field value changes.
     @IBAction func mpsOnValueChange(_ sender: Any) {
         if (self.mpsTextField.text != "") {
             if(Double(self.mpsTextField.text!) != nil) {
@@ -22,7 +24,7 @@ class SpeedViewController: BaseViewController {
                 let speeds:Speed = speedController.convertValues()
                 
                 self.kmphTextField.text = String(speeds.getSpeedInKMPH())
-                self.ftpsTextField.text = String(speeds.getSpeedInFTPM())
+                self.ftpmTextField.text = String(speeds.getSpeedInFTPM())
                 self.mphTextField.text = String(speeds.getSpeedInMPH())
                 
             }
@@ -35,11 +37,12 @@ class SpeedViewController: BaseViewController {
         }
     }
     
-    @IBAction func ftpsOnValueChange(_ sender: Any) {
-        if (self.ftpsTextField.text != "") {
-            if(Double(self.ftpsTextField.text!) != nil) {
+    // Executes when foot per minute text field value changes
+    @IBAction func ftpmOnValueChange(_ sender: Any) {
+        if (self.ftpmTextField.text != "") {
+            if(Double(self.ftpmTextField.text!) != nil) {
                 
-                let speedController = SpeedController(valueToConvert: self.ftpsTextField.text!, typeOfValue: WellknownSpeedType.FEET_PER_MINUTE)
+                let speedController = SpeedController(valueToConvert: self.ftpmTextField.text!, typeOfValue: WellknownSpeedType.FEET_PER_MINUTE)
                 let speeds:Speed = speedController.convertValues()
                 
                 self.kmphTextField.text = String(speeds.getSpeedInKMPH())
@@ -47,7 +50,7 @@ class SpeedViewController: BaseViewController {
                 self.mphTextField.text = String(speeds.getSpeedInMPH())
             }
             else {
-                self.ftpsTextField.text = self.ftpsTextField.text!.substring(to: self.ftpsTextField.text!.index(before: self.ftpsTextField.text!.endIndex))
+                self.ftpmTextField.text = self.ftpmTextField.text!.substring(to: self.ftpmTextField.text!.index(before: self.ftpmTextField.text!.endIndex))
             }
         }
         else {
@@ -55,6 +58,7 @@ class SpeedViewController: BaseViewController {
         }
     }
     
+    // Executes when kilo meters per hour text field value changes
     @IBAction func kmphOnValueChange(_ sender: Any) {
         if (self.kmphTextField.text != "") {
             if(Double(self.kmphTextField.text!) != nil) {
@@ -63,7 +67,7 @@ class SpeedViewController: BaseViewController {
                 let speeds:Speed = speedController.convertValues()
                 
                 self.mpsTextField.text = String(speeds.getSpeedInMPS())
-                self.ftpsTextField.text = String(speeds.getSpeedInFTPM())
+                self.ftpmTextField.text = String(speeds.getSpeedInFTPM())
                 self.mphTextField.text = String(speeds.getSpeedInMPH())
             }
             else {
@@ -75,6 +79,7 @@ class SpeedViewController: BaseViewController {
         }
     }
     
+    // Executes when miles per hour text field value changes
     @IBAction func mphOnValueChange(_ sender: Any) {
         if (self.mphTextField.text != "") {
             if(Double(self.mphTextField.text!) != nil) {
@@ -83,7 +88,7 @@ class SpeedViewController: BaseViewController {
                 let speeds:Speed = speedController.convertValues()
                 
                 self.kmphTextField.text = String(speeds.getSpeedInKMPH())
-                self.ftpsTextField.text = String(speeds.getSpeedInFTPM())
+                self.ftpmTextField.text = String(speeds.getSpeedInFTPM())
                 self.mpsTextField.text = String(speeds.getSpeedInMPS())
             }
             else {
@@ -95,9 +100,10 @@ class SpeedViewController: BaseViewController {
         }
     }
     
+    // Clears all the text fields
     @IBAction func clearButtonOnClick(_ sender: Any) {
         self.kmphTextField.text = ""
-        self.ftpsTextField.text = ""
+        self.ftpmTextField.text = ""
         self.mpsTextField.text = ""
         self.mphTextField.text = ""
     }

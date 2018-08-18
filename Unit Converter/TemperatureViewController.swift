@@ -10,12 +10,14 @@ import UIKit
 
 class TemperatureViewController: BaseViewController {
 
+    // Assigning the text fields on the current UI
     @IBOutlet weak var celsiusTextField: UITextField!
     @IBOutlet weak var fahrenheitTextField: UITextField!
     @IBOutlet weak var kelvinTextField: UITextField!
     
 //    let regexPattern = "(\\-{0,1})?(\\d{0,})(\\.{0,1})(\\d{1,})"
     
+    // Executes when the celcius text field value changes.
     @IBAction func celsiusOnValueChange(_ sender: Any) {
         
         if self.celsiusTextField.text != "" {
@@ -38,7 +40,7 @@ class TemperatureViewController: BaseViewController {
     }
     
     
-    
+    // Executes when the farenheit text field value changes.
     @IBAction func fahrenheitOnValueChange(_ sender: Any) {
         if (self.fahrenheitTextField.text != "") {
             if(self.fahrenheitTextField.text == "-") { }
@@ -58,6 +60,7 @@ class TemperatureViewController: BaseViewController {
         }
     }
     
+    // Executes when the kelvin textfield value changes.
     @IBAction func kelvinOnValueChange(_ sender: Any) {
         if (self.kelvinTextField.text != "") {
             if(self.kelvinTextField.text == "-") { }
@@ -77,6 +80,7 @@ class TemperatureViewController: BaseViewController {
         }
     }
     
+    // Clears all the text fields
     @IBAction func clearButtonOnClick(_ sender: Any) {
         self.celsiusTextField.text = ""
         self.fahrenheitTextField.text = ""

@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Common methods for the UIViewControllers are defined here
 class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class BaseViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    // Checks if the regex pattern matches. If matches returs a boolean value.
     func isMatched(regexPattern pattern: String, stringToCompare value: String) -> Bool{
         var status = false
         
@@ -37,12 +39,5 @@ class BaseViewController: UIViewController {
         }
         
         return status
-    }
-}
-
-extension String { subscript(range: ClosedRange<Int>) -> String {
-    let lowerIndex = index(startIndex, offsetBy: max(0,range.lowerBound), limitedBy: endIndex) ?? endIndex
-    return substring( with: lowerIndex..<(index(lowerIndex, offsetBy: range.upperBound - range.lowerBound + 1,
-                                                limitedBy: endIndex) ?? endIndex))
     }
 }

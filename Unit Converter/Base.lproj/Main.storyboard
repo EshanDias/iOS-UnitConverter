@@ -484,7 +484,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done"/>
                                 <connections>
-                                    <action selector="ftpsOnValueChange:" destination="3Wi-2W-hc8" eventType="editingChanged" id="Nud-Lh-ecT"/>
+                                    <action selector="ftpmOnValueChange:" destination="3Wi-2W-hc8" eventType="editingChanged" id="ruf-qb-FhL"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="km/h" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGb-QM-c3W">
@@ -566,7 +566,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Speed" image="speed_tabMenu" id="bte-Rf-gqY"/>
                     <connections>
-                        <outlet property="ftpsTextField" destination="phh-6r-EoR" id="nXp-vn-clp"/>
+                        <outlet property="ftpmTextField" destination="phh-6r-EoR" id="728-wu-ql5"/>
                         <outlet property="kmphTextField" destination="LGb-QM-c3W" id="P3G-S3-XmS"/>
                         <outlet property="mphTextField" destination="4h1-lG-JA1" id="sJF-Kc-1VK"/>
                         <outlet property="mpsTextField" destination="yOl-tb-0Jj" id="lek-HI-kDG"/>

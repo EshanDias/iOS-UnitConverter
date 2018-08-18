@@ -10,12 +10,14 @@ import UIKit
 
 class DistanceViewController: BaseViewController {
     
+    // Define all the text fields in the distance UI
     @IBOutlet weak var metreTextField: UITextField!
     @IBOutlet weak var footTextField: UITextField!
     @IBOutlet weak var yardTextField: UITextField!
     @IBOutlet weak var kilometreTextField: UITextField!
     @IBOutlet weak var mileTextField: UITextField!
     
+    // Executes when the lenght in meters text field value changes.
     @IBAction func metreValueOnChange(_ sender: Any) {
         if (self.metreTextField.text != "") {
             if(Double(self.metreTextField.text!) != nil) {
@@ -36,6 +38,7 @@ class DistanceViewController: BaseViewController {
         }
     }
     
+    // Executes when the length in feet text field value changes.
     @IBAction func footValueOnChange(_ sender: Any) {
         if (self.footTextField.text != "") {
             if(Double(self.footTextField.text!) != nil) {
@@ -55,6 +58,7 @@ class DistanceViewController: BaseViewController {
         }
     }
     
+    // Executes when the length in yards text field value changes.
     @IBAction func yardValueOnChange(_ sender: Any) {
         if (self.yardTextField.text != "") {
             if(Double(self.yardTextField.text!) != nil) {
@@ -75,6 +79,7 @@ class DistanceViewController: BaseViewController {
         }
     }
     
+    // Executes when the length in kiometere text field changes.
     @IBAction func kilometreValueOnChange(_ sender: Any) {
         if (self.kilometreTextField.text != "") {
             if(Double(self.kilometreTextField.text!) != nil) {
@@ -95,6 +100,7 @@ class DistanceViewController: BaseViewController {
         }
     }
     
+    // Executes when the length on miles text field value changes.
     @IBAction func mileValueOnChange(_ sender: Any) {
         if (self.mileTextField.text != "") {
             if(Double(self.mileTextField.text!) != nil) {
@@ -115,6 +121,7 @@ class DistanceViewController: BaseViewController {
         }
     }
     
+    // Clears all the text field values.
     @IBAction func clearButtonOnClick(_ sender: Any) {
         self.kilometreTextField.text = ""
         self.footTextField.text = ""
