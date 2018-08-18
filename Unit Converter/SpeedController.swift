@@ -54,7 +54,7 @@ class SpeedController {
                 speed = self.convertValuesFromMPS()
             case WellknownSpeedType.KILOMETERS_PER_HOUR:
                 speed = self.convertValuesFromKMPH()
-            case WellknownSpeedType.FEET_PER_HOUR:
+            case WellknownSpeedType.FEET_PER_MINUTE:
                 speed = self.convertFromFPM()
             case WellknownSpeedType.MILES_PER_HOUR:
                 speed = self.convertValuesFromMPH()

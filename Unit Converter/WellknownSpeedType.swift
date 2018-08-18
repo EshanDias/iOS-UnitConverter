@@ -12,5 +12,5 @@ enum WellknownSpeedType {
     case METERS_PER_SECOND
     case KILOMETERS_PER_HOUR
     case MILES_PER_HOUR
-    case FEET_PER_HOUR
+    case FEET_PER_MINUTE
 }

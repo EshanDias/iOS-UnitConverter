@@ -37,9 +37,9 @@ class SpeedViewController: BaseViewController {
     
     @IBAction func ftpsOnValueChange(_ sender: Any) {
         if (self.ftpsTextField.text != "") {
-            if(Double(self.mpsTextField.text!) != nil) {
+            if(Double(self.ftpsTextField.text!) != nil) {
                 
-                let speedController = SpeedController(valueToConvert: self.ftpsTextField.text!, typeOfValue: WellknownSpeedType.FEET_PER_HOUR)
+                let speedController = SpeedController(valueToConvert: self.ftpsTextField.text!, typeOfValue: WellknownSpeedType.FEET_PER_MINUTE)
                 let speeds:Speed = speedController.convertValues()
                 
                 self.kmphTextField.text = String(speeds.getSpeedInKMPH())
@@ -87,7 +87,7 @@ class SpeedViewController: BaseViewController {
                 self.mpsTextField.text = String(speeds.getSpeedInMPS())
             }
             else {
-                self.mphTextField.text = self.mphTextField.text![0...(self.mphTextField.text!.characters.count - 2)]
+                self.mphTextField.text = self.mphTextField.text!.substring(to: self.mphTextField.text!.index(before: self.mphTextField.text!.endIndex))
             }
         }
         else {

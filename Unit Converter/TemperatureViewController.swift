@@ -29,7 +29,7 @@ class TemperatureViewController: BaseViewController {
                 self.kelvinTextField.text = String(temperature.getTemperatureInKelvin())
             }
             else {
-                self.celsiusTextField.text = self.celsiusTextField.text![0...(self.celsiusTextField.text!.characters.count - 2)]
+                self.celsiusTextField.text = self.celsiusTextField.text!.substring(to: self.celsiusTextField.text!.index(before: self.celsiusTextField.text!.endIndex))
             }
         }
         else if self.celsiusTextField.text == "" {
@@ -50,7 +50,7 @@ class TemperatureViewController: BaseViewController {
                 self.kelvinTextField.text = String(temperature.getTemperatureInKelvin())
             }
             else {
-                self.fahrenheitTextField.text = self.fahrenheitTextField.text![0...(self.fahrenheitTextField.text!.characters.count - 2)]
+                self.fahrenheitTextField.text = self.fahrenheitTextField.text!.substring(to: self.fahrenheitTextField.text!.index(before: self.fahrenheitTextField.text!.endIndex))
             }
         }
         else if self.fahrenheitTextField.text == "" {
@@ -69,7 +69,7 @@ class TemperatureViewController: BaseViewController {
                 self.celsiusTextField.text = String(temperature.getTemperatureInCelsius())
             }
             else {
-                self.kelvinTextField.text = self.kelvinTextField.text![0...(self.kelvinTextField.text!.characters.count - 2)]
+                self.kelvinTextField.text = self.kelvinTextField.text!.substring(to: self.kelvinTextField.text!.index(before: self.kelvinTextField.text!.endIndex))
             }
         }
         else if self.kelvinTextField.text == "" {
