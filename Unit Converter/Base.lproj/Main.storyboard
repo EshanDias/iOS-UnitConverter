@@ -314,6 +314,7 @@
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="6UF-za-Cgu"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="8EP-XY-FGx"/>
                                     <constraint firstAttribute="height" constant="30" id="jn8-fK-HBW"/>
                                 </constraints>
                                 <state key="normal" title="Clear">
@@ -321,8 +322,7 @@
                                     <color key="titleShadowColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonClearOnClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="SJA-wa-Hv8"/>
-                                    <action selector="clearButtonOnClick:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="dZT-oM-41T"/>
+                                    <action selector="clearButtonOnClick:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="QEL-KP-unM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -523,8 +523,7 @@
                                     <color key="titleShadowColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonClearOnClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="5Hm-kY-V5h"/>
-                                    <action selector="clearButtonOnClick:" destination="3Wi-2W-hc8" eventType="touchUpInside" id="0e0-ri-BkL"/>
+                                    <action selector="clearButtonOnClick:" destination="3Wi-2W-hc8" eventType="touchUpInside" id="kMJ-Yg-gNE"/>
                                 </connections>
                             </button>
                         </subviews>

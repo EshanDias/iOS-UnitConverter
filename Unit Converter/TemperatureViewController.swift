@@ -14,18 +14,22 @@ class TemperatureViewController: BaseViewController {
     @IBOutlet weak var fahrenheitTextField: UITextField!
     @IBOutlet weak var kelvinTextField: UITextField!
     
-    let regexPattern = "(\\-{0,1})?(\\d{0,})(\\.{0,1})(\\d{1,})"
+//    let regexPattern = "(\\-{0,1})?(\\d{0,})(\\.{0,1})(\\d{1,})"
     
     @IBAction func celsiusOnValueChange(_ sender: Any) {
         
-        
         if self.celsiusTextField.text != "" {
-            if (isMatched(regexPattern: regexPattern, stringToCompare: self.celsiusTextField.text!)) {
+//            if (isMatched(regexPattern: regexPattern, stringToCompare: self.celsiusTextField.text!)) {
+            if (self.celsiusTextField.text == "-") { }
+            else if (Double(self.celsiusTextField.text!) != nil) {
                 let temperatureController = TemperatureController(valueToConvert: self.celsiusTextField.text!, typeOfValue: WellknownTemperatureType.CELSIUS)
                 let temperature:Temperature = temperatureController.convertValues()
                 
                 self.fahrenheitTextField.text = String(temperature.getTemperatureInFahrenheir())
                 self.kelvinTextField.text = String(temperature.getTemperatureInKelvin())
+            }
+            else {
+                self.celsiusTextField.text = self.celsiusTextField.text![0...(self.celsiusTextField.text!.characters.count - 2)]
             }
         }
         else if self.celsiusTextField.text == "" {
@@ -33,14 +37,20 @@ class TemperatureViewController: BaseViewController {
         }
     }
     
+    
+    
     @IBAction func fahrenheitOnValueChange(_ sender: Any) {
         if (self.fahrenheitTextField.text != "") {
-            if (isMatched(regexPattern: regexPattern, stringToCompare: self.fahrenheitTextField.text!)) {
+            if(self.fahrenheitTextField.text == "-") { }
+            else if (Double(self.fahrenheitTextField.text!) != nil) {
                 let temperatureController = TemperatureController(valueToConvert: self.fahrenheitTextField.text!, typeOfValue: WellknownTemperatureType.FAHRENHEIT)
                 let temperature:Temperature = temperatureController.convertValues()
             
                 self.celsiusTextField.text = String(temperature.getTemperatureInCelsius())
                 self.kelvinTextField.text = String(temperature.getTemperatureInKelvin())
+            }
+            else {
+                self.fahrenheitTextField.text = self.fahrenheitTextField.text![0...(self.fahrenheitTextField.text!.characters.count - 2)]
             }
         }
         else if self.fahrenheitTextField.text == "" {
@@ -50,12 +60,16 @@ class TemperatureViewController: BaseViewController {
     
     @IBAction func kelvinOnValueChange(_ sender: Any) {
         if (self.kelvinTextField.text != "") {
-            if (isMatched(regexPattern: regexPattern, stringToCompare: self.fahrenheitTextField.text!)) {
+            if(self.kelvinTextField.text == "-") { }
+            else if (Double(self.kelvinTextField.text!) != nil) {
                 let temperatureController = TemperatureController(valueToConvert: self.kelvinTextField.text!, typeOfValue: WellknownTemperatureType.KELVIN)
                 let temperature:Temperature = temperatureController.convertValues()
             
                 self.fahrenheitTextField.text = String(temperature.getTemperatureInFahrenheir())
                 self.celsiusTextField.text = String(temperature.getTemperatureInCelsius())
+            }
+            else {
+                self.kelvinTextField.text = self.kelvinTextField.text![0...(self.kelvinTextField.text!.characters.count - 2)]
             }
         }
         else if self.kelvinTextField.text == "" {
